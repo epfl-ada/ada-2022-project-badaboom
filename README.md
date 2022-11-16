@@ -12,7 +12,7 @@ The project aims at underlying the differences of a successful movie in Hollywoo
 ## Additional datasets
 
 ### IMdb datasets
-- [title.rating.tsv.gz](https://datasets.imdbws.com/title.ratings.tsv.gz): Contains the IMDb rating (`averageRating`) and votes (`numVotes`) information of the films.
+- [title.ratings.tsv.gz](https://datasets.imdbws.com/title.ratings.tsv.gz): Contains the IMDb rating (`averageRating`) and votes (`numVotes`) information of the films.
 - [title.basics.tsv.gz](https://datasets.imdbws.com/title.basics.tsv.gz): Contains basic informations about films. The dataset was used for the movies titles in the purpose to merge our data with the `averageRating` data, the `runtimeMinutes` to complete our missing data and and the `isAdult` data.
 
 Those 2 datasets are merged with the CMU dataset based on `movie_name` for CMU dataset and `originalTitle` for the IMdb datasets. You can find the documentation on these datasets [here](https://www.imdb.com/interfaces/).
