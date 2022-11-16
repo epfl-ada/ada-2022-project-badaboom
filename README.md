@@ -16,6 +16,7 @@ The project aims at underlying the differences of a successful movie in Hollywoo
 ### IMdb datasets
 - title.rating.tsv.gz: Contains the IMDb rating and votes information of the films
 - title.basics.tsv.gz: Contains basic informations about films. The dataset was used for the movies titles in the purpose to merge our data with the ratings movie dataset, the runtime to complete our missing data and and the data isadult
+
 Those 2 datasets are merged with the CMU dataset based on movie title
 
 ### Wikidata datasets: 
