@@ -68,7 +68,7 @@ Each team member of the group brainstormed and came up with three ideas on the m
 - **Hugo** : Ratings and runtimes
 - **Linda** : Languages and numbers of films evolution through time 
 - **Lucas** : 
-- **Yann** : 
+- **Yann** : Movie genres
 
 ## A list of internal milestones up until project Milestone P3
 
