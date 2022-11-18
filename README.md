@@ -36,14 +36,10 @@ We also removed rows were there were no data and that were critical to each spec
 
 We also looked for duplicates in our data set, on the freebaseID and wikipediaID, to ensure that every movie where unique, and made sure that there were no duplicates on these two columns.
 
-**Non-relevant data**
-
-There were some odds data or unclear values, like the “world cinema” genre in the indian movies genre, which have to be discussed to if we keep those values or not, and if we keep those data, we have to conduct more researches to have a sense-making explanation of the results.
-
 ### 2. Exploratory Data Analysis (done)
 
 We then looked at the distribution of:
-- The ImdB ratings of Indian vs American movies
+- The IMDb ratings of Indian vs American movies
 - Numbers of Indian and American movies per year, through the 1912-2014 time frame
 - Movie Genres of Indian vs American movies
 - Movie Languages of Indian vs American movies
@@ -54,7 +50,7 @@ We then looked at the distribution of:
 
 We concluded that Tv tropes and Ethnicities were unusable because either too small or not enough data to perform further analysis.
 
-We also have to be careful as of our time frame series because it seems that data are incomplete starting from the years ~2008.
+We also have to be careful with our time frame series because it seems that data are incomplete starting from the years ~2008.
 
 ### 3. Time series (to do)
 We will look at the evolution of the different parameters across time and see if we find some significant variations that would reveal an interesting trend.
@@ -67,7 +63,7 @@ Secondly we could do a PCA of our different parameters and see if we can observe
 ## Organization with the team
 
 - **Hugo** : Ratings and runtimes analysis and related time series
-- **Linda** : Languages and numbers of films evolution through time 
+- **Linda** : Languages and plot summaries through time 
 - **Lucas** : Age and Gender of actors and related time series
 - **Yann** : Movie genres
 - **Everybody** : compile all data for rating prediction
