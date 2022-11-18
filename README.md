@@ -12,7 +12,7 @@ The project aims at underlying the differences of a successful movie in Hollywoo
 
 ## Additional datasets
 
-### IMdb datasets
+### IMdb datasets:
 - [title.ratings.tsv.gz](https://datasets.imdbws.com/title.ratings.tsv.gz): Contains the IMDb rating (`averageRating`) and votes (`numVotes`) information of the films.
 - [title.basics.tsv.gz](https://datasets.imdbws.com/title.basics.tsv.gz): Contains basic informations about films. The dataset was used to get the movie titles of the rated movies which was important to merge the CMU dataset with the IMdb dataset. We merge those 2 IMdb datasets based on the movie ID `tconst`. Additionaly, we keep from this dataset the `runtimeMinutes` to complete the missing runtime values of the CMU dataset and the `isAdult` data for further analysis.
 
@@ -24,19 +24,24 @@ Those 2 datasets are merged with the CMU dataset based on `movie_name` for CMU d
 ## Methods
 
 **1. Pre-processing of the data**
+
 We started to clean our data set accordingly to our set of questions. 
 
 **Missingness**
+
 We began to observe the missingness in each column to observe what could be possible to analyze or not. We quickly saw that the revenue of each movie values was the column with the most missing values, hence difficult to draw any analysis with these data. We decided then to shift our analysis focus on with the ImdB ratings and add these latter to our data set. 
 We also removed rows were there were no data and that were critical to each specific analysis, like movies that did not have languages for the languages analysis, or movies that did not have any released date, …
 
 **Duplicates**
+
 We also looked for duplicates in our data set, on the freebaseID and wikipediaID, to ensure that every movie where unique, and made sure that there were no duplicates on these two columns.
 
 **Non-relevant data**
+
 There were some odds data or unclear values, like the “world cinema” genre in the indian movies genre, which have to be discussed to if we keep those values or not, and if we keep those data, we have to conduct more researches to have a sense-making explanation of the results.
 
 **2. Exploratory Data Analysis**
+
 We then looked at the distribution of:
 - The ImdB ratings of Indian vs American movies
 - Numbers of Indian and American movies per year, through the 1912-2014 time frame
@@ -47,11 +52,11 @@ We then looked at the distribution of:
 
 ## Proposed timeline
 
-**Milestone 1:**
+**Milestone 1** :
 
 Each team member of the group brainstormed and came up with three ideas on the movie data set.
 
-**Milestone 2:**
+**Milestone 2** :
 
 - Cleaning and handling the data : we handled (1) missingness of the data:  removed the movies where no freebase or wiki ID where found, and removed NA’s for each analysis or column that we were interested in to plot and (2) duplicates on the freebase or wikipedia ID, to ensure that every movie we have are unique.
 - Did a first exploratory data analysis for each columns of interest and added data to solve the missingness of the movie revenue values and data.
@@ -65,7 +70,7 @@ Each team member of the group brainstormed and came up with three ideas on the m
 - **Lucas** : 
 - **Yann** : 
 
-## A list of internal milestones up until project Milestone P3.
+## A list of internal milestones up until project Milestone P3
 
 **P2 to December 9th** : 
 - Finish the notebook 
