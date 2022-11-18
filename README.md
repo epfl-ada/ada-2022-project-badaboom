@@ -23,7 +23,7 @@ Those 2 datasets are merged with the CMU dataset based on `movie_name` for CMU d
 
 ## Methods
 
-**1. Pre-processing of the data**
+### 1. Pre-processing of the data (done)
 
 We started to clean our data set accordingly to our set of questions. 
 
@@ -40,45 +40,47 @@ We also looked for duplicates in our data set, on the freebaseID and wikipediaID
 
 There were some odds data or unclear values, like the “world cinema” genre in the indian movies genre, which have to be discussed to if we keep those values or not, and if we keep those data, we have to conduct more researches to have a sense-making explanation of the results.
 
-**2. Exploratory Data Analysis**
+### 2. Exploratory Data Analysis (done)
 
 We then looked at the distribution of:
 - The ImdB ratings of Indian vs American movies
 - Numbers of Indian and American movies per year, through the 1912-2014 time frame
 - Movie Genres of Indian vs American movies
 - Movie Languages of Indian vs American movies
-- Character Data
-- Explored the Tv tropes, but the data set seems too small to contain any interesting values to conduct with our analysis 
+- Tv tropes
+- Ethnicities of the actors of Indian vs American movies
+- Age and Gender of Indian vs American movies
+- Plot summaries data of Indian vs American movies
 
-## Proposed timeline
+We concluded that Tv tropes and Ethnicities were unusable because either too small or not enough data to perform further analysis.
 
-**Milestone 1** :
+We also have to be careful as of our time frame series because it seems that data are incomplete starting from the years ~2008.
 
-Each team member of the group brainstormed and came up with three ideas on the movie data set.
+### 3. Time series (to do)
+We will look at the evolution of the different parameters across time and see if we find some significant variations that would reveal an interesting trend.
 
-**Milestone 2** :
+### 4. Perspective with the ratings (to do)
+To address our main question (the recipe of the perfect movie) we will run diverse supervised machine learning techniques to predict the rating of the movie and will interpret the weights for each parameter to deduce which impact has a parameter on the rating of a movie.
 
-- Cleaning and handling the data : we handled (1) missingness of the data:  removed the movies where no freebase or wiki ID where found, and removed NA’s for each analysis or column that we were interested in to plot and (2) duplicates on the freebase or wikipedia ID, to ensure that every movie we have are unique.
-- Did a first exploratory data analysis for each columns of interest and added data to solve the missingness of the movie revenue values and data.
-- Came up with various researches questions
-
+Secondly we could do a PCA of our different parameters and see if we can observe clusters of American and Indian movies and if we have enough data, put it in perspective with the time to see if the clusters converge. This could underline a convergence of the 2 cultures and a uniformization of the society and answer our secondary question.
 
 ## Organization with the team
 
-- **Hugo** : Ratings and runtimes
+- **Hugo** : Ratings and runtimes analysis and related time series
 - **Linda** : Languages and numbers of films evolution through time 
-- **Lucas** : 
+- **Lucas** : Age and Gender of actors and related time series
 - **Yann** : Movie genres
+- **Everybody** : compile all data for rating prediction
 
-## A list of internal milestones up until project Milestone P3
+## A list of internal milestones up until project Milestone P3 and proposed timeline
 
-**P2 to December 9th** : 
-- Finish the notebook 
-- Answer all research questions, in particular study the relationship between each of our variables and the ratings in function of time
+**Until December 2nd :** 
+- Solve point 3 of method
 
-**December 9th to P3** : 
-- Create the Wiki
-- Compile all figures and discuss the results
+**Until December 9th :**
+- Solve point 4 of Method
+- Finish the notebook
+- Verify that all research questions are answered.
 
-## Questions for TAs
-
+**December 9th to P3 :**
+- Create the wiki, compile all figures and discuss the results
