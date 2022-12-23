@@ -1,4 +1,4 @@
-# **What is the recipe for the perfect movie in BOLLYWOOD vs. in HOLLYWOOD?**
+# **BOLLYWOOD vs. HOLLYWOOD: endgame**
 
 You can find the datastory [here](https://lgburget.github.io/Hollywood-vs-Bollywood/)
 
