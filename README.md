@@ -1,15 +1,19 @@
 # **What is the recipe for the perfect movie in BOLLYWOOD vs. in HOLLYWOOD?**
 
 You can find the datastory [here](https://lgburget.github.io/Hollywood-vs-Bollywood/)
+
 ## Abstract
-The project aims at underlying the differences of a successful movie in Hollywood versus in Bollywood. In recent years, globalization induced a standardization of cultures and interests across the world. Indian and American cultures are two different cultures that emerged in an independent manner, thus comparing those 2 cultures might be a good indicator of the convergence of cultures. We propose to study this effect through various factors such as genre, runtime, lexical fields of plot, gender representation, age of the actors. We are also interested in this context of studying in how many languages are the Bollywood and Hollywood films translated as it could also be an indication of the standardization of the cultures. To evaluate this standardization we would like to study the impact of all those factors across time and how they affect the ratings of the movies.
+Bollywood and Hollywood. Two of the biggest film industries today. A westerner might assumes that Bollywood has a long way to go before having the same importance in term of production, compared to the American industry. But when we look at some numbers, the Indian movie industry is extremely famous in India, which has more than 1.4 billion people (more than 1/8 of the population on Earth !).The Indian film industry’s export to other countries is also growing, notably in China, and its productions have appeared in occidental cinemas more and more in recent years.
+
+Unlike Hollywood, Bollywood is not a real place, but only a contraction of Hollywood, the term representing the place of reference for American cinema, and Bombay, the capital of India (now Mumbai) but also the historical base of Indian cinema. The association between these two industries may lead one to believe that Indian cinema is strongly influenced by American cinema. Thus, in this project we will look at the features of their films and analyze the similarities and differences between these two world famous film factories. Do Indian films are impregnated by American production or do they have their own identity?
+
 
 ## Research Questions
-- What features stand out on the top rated films in Hollywood and Bollywood? Have these features changed/evolved over time?
-- Is there a standardization of film culture over time?
-- How does the runtime of the movie affect the rating? Does this effect change across time? 
-- Are the ratings constant across time ?
-- Are the languages of the movies evolving through time ?
+As a first part, we will ask ourselves:
+-What are the differences and similarities between American and Indian movies?
+As a second part, to deepen our analysis:
+-Do films from America and India with the same genre talks about the same topics?
+
 
 ## Additional datasets
 
@@ -24,58 +28,83 @@ Those 2 datasets are merged with the CMU dataset based on `movie_name` for CMU d
 
 ## Methods
 
-### 1. Pre-processing of the data (done)
+### 1. Pre-processing of the data 
 
-We started to clean our data set accordingly to our set of questions. 
+We started to clean our data set accordingly to our set of questions.
 
 **Missingness**
 
 We began to observe the missingness in each column to observe what could be possible to analyze or not. We quickly saw that the revenue of each movie values was the column with the most missing values, hence difficult to draw any analysis with these data. We decided then to shift our analysis focus on with the ImdB ratings and add these latter to our data set. 
-We also removed rows were there were no data and that were critical to each specific analysis, like movies that did not have languages for the languages analysis, or movies that did not have any released date, …
+We also removed rows were there were no data and that were critical to each specific analysis, like movies that did not have languages for the languages analysis, movies that did not have any released date, plot summaries, ...
 
 **Duplicates**
 
 We also looked for duplicates in our data set, on the freebaseID and wikipediaID, to ensure that every movie where unique, and made sure that there were no duplicates on these two columns.
 
-### 2. Exploratory Data Analysis (done)
+**Texts processing**
 
-We then looked at the distribution of:
-- The IMDb ratings of Indian vs American movies
-- Numbers of Indian and American movies per year, through the 1912-2014 time frame
-- Movie Genres of Indian vs American movies
-- Movie Languages of Indian vs American movies
-- Tv tropes
-- Ethnicities of the actors of Indian vs American movies
-- Age and Gender of Indian vs American movies
-- Plot summaries data of Indian vs American movies
+We performed casefolding, removal of special characters for the actor's names, genres of movies, languages and plot summaries of the movies. We also removed the freebase reference where we already have the information.
+For the summaries, we performed lemmatizazion, removal of stopwords and punctuations along with casefolding and created bigrams to perform the topic detection.
 
-We concluded that Tv tropes and Ethnicities were unusable because either too small or not enough data to perform further analysis.
 
-We also have to be careful with our time frame series because it seems that data are incomplete starting from the years ~2008.
+### 2. Exploratory Data Analysis (EDA)
 
-### 3. Time series (to do)
-We will look at the evolution of the different parameters across time and see if we find some significant variations that would reveal an interesting trend.
+For the two dataset (Indian and American), we look at the distribution of:
 
-### 4. Perspective with the ratings (to do)
-To address our main question (the recipe of the perfect movie) we will run diverse supervised machine learning techniques to predict the rating of the movie and will interpret the weights for each parameter to deduce which impact has a parameter on the rating of a movie.
+- The IMDb ratings of movies
+- Numbers of movies per year
+- Movie Genres
+- Movie Languages 
+- Ethnicities of the actors 
+- Age and gender of the actors
+- Movie summaries
 
-Secondly we could do a PCA of our different parameters and see if we can observe clusters of American and Indian movies and if we have enough data, put it in perspective with the time to see if the clusters converge. This could underline a convergence of the 2 cultures and a uniformization of the society and answer our secondary question.
+And then compare them.
+
+We also have to be careful with our time frame series because it seems that data are incomplete starting from the years ~2008 : there is a great decrease in the number of movies and informations about movies. Thus we limited the window of our analysis'time between 1980 to 2010. It was convenient to cut to 2010 instead of 2008 to create equal bins with the same number of points, in a 10 year period for our subsequent analysis.
+
+### 3. Feature extraction
+
+Following the EDA, we extracted several features for each movies:
+
+- Movie Genres
+- Mean actor age per actor's gender
+- Mean number of films each actor has played in
+- Percentage of actresses in each movies
+- Topics extracted from the plot summaries data
+- Sentiment analysis
+
+We created two finals datasets that contain all the features. One for indian movies(features_indian.csv) and the other for american movies (features_american.csv)
+
+### 4. 
+
+
+
+### 5. Investigation of the results 
+
+**TODO:** Analysis of the results + convergence of culture or not ? 
+
+The relevant graphs and results were retrived and discussion along with researchs were conducted.
+
+### 6. Creating the website
+
+We finally created a website that contains our datastory along with the meaningful figures that were relevant to our analysis.
 
 ## Organization with the team
 
-- **Hugo** : Ratings and runtimes analysis and related time series
-- **Linda** : Languages and plot summaries through time 
-- **Lucas** : Age and Gender of actors and related time series
-- **Yann** : Movie genres
-- **Everybody** : compile all data for rating prediction
+- **Hugo** : EDA, Tsne
+- **Linda** : EDA, Topic Detection, Readme
+- **Lucas** : EDA, Topics distribution across country, Website
+- **Yann** : EDA, Data story, Readme
+- **Everybody** : Compile all data for rating prediction
 
 ## A list of internal milestones up until project Milestone P3 and proposed timeline
 
 **Until December 2nd :** 
-- Solve point 3 of method
+- Solve point 3 of method (Features selection)
 
 **Until December 9th :**
-- Solve point 4 of Method
+- Solve point 4 of Method (Time series features analysis)
 - Finish the notebook
 - Verify that all research questions are answered.
 
