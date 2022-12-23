@@ -88,7 +88,6 @@ Following the EDA and topic detection, we extracted several features for each mo
 
 We created two finals datasets that contain all the features. One for indian movies (features_indian.csv) and the other for american movies (features_american.csv).
 
-
 ### 5. t-SNE 
 
 We ran the t-SNE on the standardized values of topics prevalence and mean actor data (mean male/female actor age, average number of film played per actor, percent female actor). Then, we isolate one specific genre and used K-Means on the 2 t-SNE features to cluster the movies in K cluster. We chose an adequate K by looking at the data and estimating the number of clusters that would make sense. 
@@ -122,9 +121,12 @@ We finally created a website that contains our datastory along with the meaningf
 - Solve point 3 of method (Features selection)
 
 **Until December 9th :**
-- Solve point 4 of Method (Time series features analysis)
-- Finish the notebook
+- Topic Detection (Point 3)
+- t-SNE (Point 4)
+- Cleaning the notebook
 - Verify that all research questions are answered.
 
 **December 9th to P3 :**
-- Create the wiki, compile all figures and discuss the results
+- Compile all figures 
+- Discuss the results
+- Create the Website
