@@ -10,10 +10,10 @@ Unlike Hollywood, Bollywood is not a real place, but only a contraction of Holly
 
 ## Research Questions
 As a first part, we will ask ourselves:
--What are the differences and similarities between American and Indian movies?
+- What are the differences and similarities between American and Indian movies?
 
 As a second part, to deepen our analysis:
--Do films from America and India with the same genre talks about the same topics?
+- Do films from America and India with the same genre talks about the same topics?
 
 
 ## Additional datasets
