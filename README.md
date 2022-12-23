@@ -101,17 +101,21 @@ After that, we computed:
 
 Finally, we plotted everthing on an interactive plot.
 
-### 6. Investigation of the results 
+### 6. Wordclouds
+
+We processed the summaries of the romantic movies on the studied period to make the wordclouds. We applied a pipeline similar to the one we used for the LDA and topic detection. First we remove the stopwords, then we make the bigram, lemmatize and filtrate only nouns and adjectives. With this result, we compute the bag-of-words matrix and we compute the mean occurence of each word and organize it in a dictionary that can be read by the wordcloud maker. We ran this pipeline for the romantic movies of each country separately.
+
+### 7. Investigation of the results 
 
 The relevant graphs and results were retrieved and discussion along with researches were conducted.
 
-### 7. Creating the website
+### 8. Creating the website
 
 We finally created a website that contains our datastory along with the meaningful figures that were relevant to our analysis.
 
 ## Organization with the team
 
-- **Hugo** : EDA, t-SNE, Wordcloud
+- **Hugo** : EDA, t-SNE, Wordclouds
 - **Linda** : EDA, Topic Detection, Readme
 - **Lucas** : EDA, Topics distribution across country, Website
 - **Yann** : EDA, Data story, Readme
