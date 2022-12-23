@@ -79,6 +79,8 @@ We created two finals datasets that contain all the features. One for indian mov
 
 ### 4. 
 
+**t-SNE** : we run t-SNE on standardized values of topics prevalence and mean actor data (mean male/female actor age, average number of film played per actor, percent female actor). Then, we isolate one specific genre and used K-Means on the 2 t-SNE features to cluster the movies in K cluster. We chose an adequate K by looking at the data and estimating the number of clusters that would make sense. 
+Then, we compute mean of standardized topic prevalence of each cluster, the the proportion of each country divided  by the proportion in the genre population for normalization as well as the mean age of male and female actor, mean of number of film per actor and mean percent of female actor. Finally we plot everthing on an interactive plot.
 
 
 ### 5. Investigation of the results 
