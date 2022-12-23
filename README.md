@@ -10,10 +10,10 @@ Unlike Hollywood, Bollywood is not a real place, but only a contraction of Holly
 
 ## Research Questions
 As a first part, we will ask ourselves:
--What are the differences and similarities between American and Indian movies?
+- What are the differences and similarities between American and Indian movies?
 
 As a second part, to deepen our analysis:
--Do films from America and India with the same genre talks about the same topics?
+- Do films from America and India with the same genre talks about the same topics?
 
 
 ## Additional datasets
@@ -62,11 +62,22 @@ For the two dataset (Indian and American), we look at the distribution of:
 
 And then compare them.
 
-We also have to be careful with our time frame series because it seems that data are incomplete starting from the years ~2008 : there is a great decrease in the number of movies and informations about movies. Thus we limited the window of our analysis'time between 1980 to 2010. It was convenient to cut to 2010 instead of 2008 to create equal bins with the same number of points, in a 10 year period for our subsequent analysis.
+We also have to be careful with our time frame series because it seems that data are incomplete starting from the years ~2008 : there is a great decrease in the number of movies and informations about movies. Thus we limited the window of our analysis' time between 1980 to 2010. It was convenient to cut to 2010 instead of 2008 to create equal bins with the same number of points, in a 10 year period for our subsequent analysis.
 
-### 3. Feature extraction
+We were also conscient about possible bias made about the unbalanced data set we have: Indian movies may be underrepresented, compared to American movies.
 
-Following the EDA, we extracted several features for each movies:
+### 3. Topic Detection
+
+Topic modeling is a method of discovering the underlying topics or themes present in a collection of documents. It is a technique used in natural language processing and is often used to analyze large collections of text data, in our case Indian and American movie summaries.
+
+We used the common method of topic modeling called latent Dirichlet allocation (LDA). LDA is a probabilistic model that assumes that each document in a collection is a mixture of a small number of topics, and that each word in a document is associated with one of the topics. The goal of LDA is to discover the hidden topics in a collection of documents and to estimate the probability of each word belonging to each topic.
+
+We extracted 12 topics, that we then named accordingly to the keywords of each topic.
+The plot was created using plDAvis library.
+
+### 4. Feature extraction
+
+Following the EDA and topic detection, we extracted several features for each movies:
 
 - Movie Genres
 - Mean actor age per actor's gender
@@ -75,27 +86,30 @@ Following the EDA, we extracted several features for each movies:
 - Topics extracted from the plot summaries data
 - Sentiment analysis
 
-We created two finals datasets that contain all the features. One for indian movies(features_indian.csv) and the other for american movies (features_american.csv)
+We created two finals datasets that contain all the features. One for indian movies (features_indian.csv) and the other for american movies (features_american.csv).
 
-### 4. 
+### 5. t-SNE 
 
-**t-SNE** : we run t-SNE on standardized values of topics prevalence and mean actor data (mean male/female actor age, average number of film played per actor, percent female actor). Then, we isolate one specific genre and used K-Means on the 2 t-SNE features to cluster the movies in K cluster. We chose an adequate K by looking at the data and estimating the number of clusters that would make sense. 
-Then, we compute mean of standardized topic prevalence of each cluster, the the proportion of each country divided  by the proportion in the genre population for normalization as well as the mean age of male and female actor, mean of number of film per actor and mean percent of female actor. Finally we plot everthing on an interactive plot.
+We ran the t-SNE on the standardized values of topics prevalence and mean actor data (mean male/female actor age, average number of film played per actor, percent female actor). Then, we isolate one specific genre and used K-Means on the 2 t-SNE features to cluster the movies in K cluster. We chose an adequate K by looking at the data and estimating the number of clusters that would make sense. 
 
+After that, we computed the mean of standardized topic prevalence of each cluster the proportion of each country divided by the proportion in the genre population. 
+- the mean age of male and female actor
+- mean of number of film per actor 
+- mean percent of female actor 
 
-### 5. Investigation of the results 
+Finally, we plotted everthing on an interactive plot.
 
-**TODO:** Analysis of the results + convergence of culture or not ? 
+### 6. Investigation of the results 
 
-The relevant graphs and results were retrived and discussion along with researchs were conducted.
+The relevant graphs and results were retrieved and discussion along with researches were conducted.
 
-### 6. Creating the website
+### 7. Creating the website
 
 We finally created a website that contains our datastory along with the meaningful figures that were relevant to our analysis.
 
 ## Organization with the team
 
-- **Hugo** : EDA, Tsne
+- **Hugo** : EDA, t-SNE
 - **Linda** : EDA, Topic Detection, Readme
 - **Lucas** : EDA, Topics distribution across country, Website
 - **Yann** : EDA, Data story, Readme
@@ -107,9 +121,12 @@ We finally created a website that contains our datastory along with the meaningf
 - Solve point 3 of method (Features selection)
 
 **Until December 9th :**
-- Solve point 4 of Method (Time series features analysis)
-- Finish the notebook
+- Topic Detection (Point 3)
+- t-SNE (Point 4)
+- Cleaning the notebook
 - Verify that all research questions are answered.
 
 **December 9th to P3 :**
-- Create the wiki, compile all figures and discuss the results
+- Compile all figures 
+- Discuss the results
+- Create the Website
