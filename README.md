@@ -90,9 +90,11 @@ We created two finals datasets that contain all the features. One for indian mov
 
 ### 5. t-SNE 
 
-We ran the t-SNE on the standardized values of topics prevalence and mean actor data (mean male/female actor age, average number of film played per actor, percent female actor). Then, we isolate one specific genre and used K-Means on the 2 t-SNE features to cluster the movies in K cluster. We chose an adequate K by looking at the data and estimating the number of clusters that would make sense. 
+We ran t-SNE and used as feature for each movie the standardized values of topics prevalence and mean actor data (mean male/female actor age, average number of film played per actor, percent female actor). Then, we isolate one specific genre and used K-Means on the 2 t-SNE features to cluster the movies in K cluster. We chose an adequate K by looking at the data and estimating the number of clusters that would make sense. 
 
-After that, we computed the mean of standardized topic prevalence of each cluster the proportion of each country divided by the proportion in the genre population. 
+After that, we computed:
+- the mean of standardized topic prevalence of each cluster 
+- the proportion of each country which we divided by the proportion of each country in the population of the selected genre. 
 - the mean age of male and female actor
 - mean of number of film per actor 
 - mean percent of female actor 
@@ -109,7 +111,7 @@ We finally created a website that contains our datastory along with the meaningf
 
 ## Organization with the team
 
-- **Hugo** : EDA, t-SNE
+- **Hugo** : EDA, t-SNE, Wordcloud
 - **Linda** : EDA, Topic Detection, Readme
 - **Lucas** : EDA, Topics distribution across country, Website
 - **Yann** : EDA, Data story, Readme
